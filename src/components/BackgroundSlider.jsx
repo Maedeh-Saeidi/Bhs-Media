@@ -33,26 +33,33 @@ export default function BackgroundSlider() {
 
   const bgImageStyle = {
     backgroundImage: `url(${imageSlider[currentState].url})`,
-    backgroundPosition: "center",
     backgroundSize: "cover",
-    height: "100%",
   };
   const goToNext = (currentState) => {
     setCurrentState(currentState);
   };
   return (
     <div className="h-screen">
-      <div style={bgImageStyle}></div>
+      <div style={bgImageStyle} className="h-[80%] sm:h-[100%] bg-center"></div>
       <div className="w-full h-screen absolute z-[998] top-0 left-0 bg-gradient-to-t from-transparent to-gray-900"></div>
-      <div className=" w-[600px] absolute z-[999] text-white left-[20%] top-[20%]">
-        <div>
-          <h1 className="text-[80px]">{imageSlider[currentState].title}</h1>
-          <p className="text-[22px]"> {imageSlider[currentState].body}</p>
+      <div className="sm:w-[600px] absolute z-[999] text-white sm:left-[20%] top-[20%]">
+        <div className="flex flex-col gap-5">
+          <h1 className="font-bold text-[45px] sm:text-[80px] ml-[10%] sm:ml-0">
+            {imageSlider[currentState].title}
+          </h1>
+          <p className="sm:text-[22px] ml-[10%] sm:ml-0">
+            {imageSlider[currentState].body}
+          </p>
         </div>
-        <div className="flex items-center justify-center gap-[10px]">
+        <div className="pt-[3rem] pl-10 sm:pl-0">
+          <button class="bg-[#3ccaf4] hover:bg-[#a6aaaf] text-white font-bold py-3 px-[7.5rem] sm:px-10 rounded">
+            Learn More
+          </button>
+        </div>
+        <div className="flex items-center justify-center gap-[10px] pt-[11rem] sm:pt-[3rem] sm:pr-[24rem]">
           {imageSlider.map((imageSlider, currentState) => (
             <span
-              className="w-[45px] h-[10px] bg-gray-400 rounded-[10px] cursor-pointer shadow-lg "
+              className="w-[105px] sm:w-[65px] h-[6px] bg-gray-400 rounded-[2px] cursor-pointer shadow-lg"
               key={currentState}
               onClick={() => goToNext(currentState)}
             ></span>
