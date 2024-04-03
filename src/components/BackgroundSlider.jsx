@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import { Fade, Zoom, Slide } from "react-slideshow-image";
 export default function BackgroundSlider() {
   const imageSlider = [
     {
@@ -34,14 +34,17 @@ export default function BackgroundSlider() {
   const bgImageStyle = {
     backgroundImage: `url(${imageSlider[currentState].url})`,
     backgroundSize: "cover",
+    transition: "background-image 1s ease-in-out",
   };
   const goToNext = (currentState) => {
     setCurrentState(currentState);
   };
+
   return (
-    <div className="h-screen">
+    <div className="h-screen ">
       <div style={bgImageStyle} className="h-[80%] sm:h-[100%] bg-center"></div>
-      <div className="w-full h-screen absolute z-[998] top-0 left-0 bg-gradient-to-t from-transparent to-gray-900"></div>
+
+      <div className="w-full h-[80%] sm:h-[100%] absolute z-[998] top-0 left-0 bg-gradient-to-t from-transparent to-gray-900"></div>
       <div className="sm:w-[600px] absolute z-[999] text-white sm:left-[20%] top-[20%]">
         <div className="flex flex-col gap-5">
           <h1 className="font-bold text-[45px] sm:text-[80px] ml-[10%] sm:ml-0">
