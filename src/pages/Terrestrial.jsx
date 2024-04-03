@@ -3,7 +3,7 @@ import React from "react";
 export default function Terrestrial() {
   return (
     <div className="bg-gray-100 flex flex-col sm:flex-row">
-      <div className="flex-1 p-8 lg:p-5 2xl:pt-10">
+      <div className="flex-1 p-8 lg:p-5 xl:pt-[10rem] 2xl:pt-10">
         <h1 className="text-[#374d72] text-[45px] pt-5 font-bold pl-4 lg:text-[40px] xl:text-[46px] xl:pt-10 2xl:text-[55px]">
           Terresterial Services
         </h1>

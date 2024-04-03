@@ -49,8 +49,6 @@ export default () => {
         }}
         navigation
         scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
       >
         <SwiperSlide className=" text-white h-[15rem] p-10 text-[25px] sm:text-[40px] bg-gradient-to-t from-transparent to-gray-700">
           <h1 className="text-center pr-1 pt-8">
