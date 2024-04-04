@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import Terrestrial from "./pages/Terrestrial";
 import Usage from "./pages/Usage";
 import MediaManagement from "./pages/MediaManagement";
+import News from "./pages/News";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Contribution></Contribution>
       <Terrestrial></Terrestrial>
       <MediaManagement></MediaManagement>
+      <News></News>
     </div>
   );
 }
